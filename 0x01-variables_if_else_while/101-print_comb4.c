@@ -4,37 +4,32 @@
  * main - Entry point of the program
  *
  * Description: This program prints all possible different combinations
- *              of three digits in ascending order, separated by ", ".
+ *              of three digits.
  *
  * Return: Always 0 (Success)
  */
 int main(void)
 {
-    int hundreds_digit, tens_digit, ones_digit;
+	int i, j, k;
 
-    for (hundreds_digit = 0; hundreds_digit <= 7; hundreds_digit++)
-    {
-        for (tens_digit = hundreds_digit + 1; tens_digit <= 8; tens_digit++)
-        {
-            for (ones_digit = tens_digit + 1; ones_digit <= 9; ones_digit++)
-            {
-                putchar(hundreds_digit + '0');
+	for (i = 0; i <= 7; i++)
+	{
+		for (j = i + 1; j <= 8; j++)
+		{
+			for (k = j + 1; k <= 9; k++)
+			{
+				putchar(i + '0');
+				putchar(j + '0');
+				putchar(k + '0');
 
-		putchar(tens_digit + '0');      
-
-		putchar(ones_digit + '0');
-
-                if (hundreds_digit != 7 || tens_digit != 8 || ones_digit != 9)
-                {
-                    putchar(',');   /* Print comma */
-                    putchar(' ');  
+				if (i != 7 || j != 8 || k != 9)
+				{
+					putchar(',');
+					putchar(' ');
+				}
+			}
 		}
-            }
-        }
-    }
-
-    putchar('\n');  /* Print newline character */
-
-    return 0;
+	}
+	putchar('\n');
+	return (0);
 }
-
