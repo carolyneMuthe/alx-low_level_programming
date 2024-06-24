@@ -18,7 +18,7 @@ int main(void)
         lowercase++;
     }
 
-    putchar('\n');  // Print newline character
+    putchar('\n');  /* Print newline character*/
 
     return 0;
 }
