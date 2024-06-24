@@ -18,20 +18,22 @@ int main(void)
         {
             for (ones_digit = tens_digit + 1; ones_digit <= 9; ones_digit++)
             {
-                putchar(hundreds_digit + '0');   // Print hundreds digit
-                putchar(tens_digit + '0');       // Print tens digit
-                putchar(ones_digit + '0');       // Print ones digit
+                putchar(hundreds_digit + '0');
+
+		putchar(tens_digit + '0');      
+
+		putchar(ones_digit + '0');
 
                 if (hundreds_digit != 7 || tens_digit != 8 || ones_digit != 9)
                 {
-                    putchar(',');   // Print comma
-                    putchar(' ');   // Print space
-                }
+                    putchar(',');   /* Print comma */
+                    putchar(' ');  
+		}
             }
         }
     }
 
-    putchar('\n');  // Print newline character
+    putchar('\n');  /* Print newline character */
 
     return 0;
 }
