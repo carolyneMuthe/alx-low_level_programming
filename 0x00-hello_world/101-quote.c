@@ -8,7 +8,15 @@
  */
 int main(void)
 {
-	write(STDOUT_FILENO, "and that piece of art is useful
+	char *msg = "and that piece of art is useful
 			\" - Dora Korpar, 2015-10-19\n", 59);
+
+	int length = 0;
+	while (sg[length] != '\0)
+		length++;
+	if (write(STDERR_FILENO, message, length) != length)
+	{
+		return(EXIT_FAILURE);
+	}
 	return (1);
 }
