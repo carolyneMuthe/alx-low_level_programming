@@ -8,18 +8,16 @@
  */
 int main(void)
 {
-    /* Message to be printed */
-    char *message = "and that piece of art is useful\" - Dora Korpar, 2015-10-19\n";
+	char *message = "and that piece of art is useful\" - Dora Korpar, 2015-10-19\n";
+	int length = 0;
 
-    /* Calculate the length of the message */
-    int length = 0;
-    while (message[length] != '\0')
-        length++;
+	while (message[length] != '\0')
+		length++;
 
-    /* Write the message to standard error using write system call */
-    if (write(STDERR_FILENO, message, length) != length)
-        return (EXIT_FAILURE); /* Return failure if write fails */
+	if (write(STDERR_FILENO, message, length) != length)
+	{
+		return (EXIT_FAILURE);
+	}
 
-    return 1; /* Return 1 as specified */
+	return (1);
 }
-
