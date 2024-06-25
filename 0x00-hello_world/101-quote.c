@@ -8,8 +8,11 @@
  */
 int main(void)
 {
-	const char msg[] = "and that piece of art is useful\" - Dora Korpar,2015-10-19\n";
+    const char msg[] = "and that piece of art is useful\" - Dora Korpar, 2015-10-19\n";
+    ssize_t len = sizeof(msg) - 1; /* Calculate the length of the message */
 
-	write(2, msg, 58);
-	return (1);
+    /* Use write system call to output to stderr (file descriptor 2) */
+    write(2, msg, len);
+
+    return 1; /* Return 1 to indicate an error */
 }
