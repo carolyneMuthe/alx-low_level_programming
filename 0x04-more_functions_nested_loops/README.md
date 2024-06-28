@@ -1,3 +1,13 @@
+In a nutshell…
+Auto QA review: 3.0/70 mandatory & 0.0/19 optional
+Altogether:  4.29%
+Mandatory: 4.29%
+Optional: 0.0%
+Calculation:  4.29% + (4.29% * 0.0%)  == 4.29%
+Concepts
+For this project, we expect you to look at this concept:
+
+Struggling with the sandbox? Try this: Using Docker & WSL on your local host
 Resources
 Read or watch:
 
