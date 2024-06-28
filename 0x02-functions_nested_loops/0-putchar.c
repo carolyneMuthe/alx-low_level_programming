@@ -1,6 +1,8 @@
 #include "main.h"
-/** 
+/**
  * main - entry point of the program
+ *
+ * Return: always return (0)
  *
  */
 int main(void)
