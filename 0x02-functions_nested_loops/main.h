@@ -10,4 +10,5 @@ void times_table(void); /*  prints the 9 times table, starting with 0.*/
 int _abs(int);/*  computes the absolute value of an integer */
 int print_last_digit(int n); /* prints the last digit of a number. */
 void jack_bauer(void); /*  prints every minute of the day of Jack Bauer, starting from 00:00 to 23:59.*/
+int add(int a, int b); /*dds two integers and returns the result*/
 #endif
