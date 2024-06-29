@@ -17,23 +17,11 @@ int main(void)
 	for (count = 3; count <= 98; count++)
 	{
 		c = a + b;
+		printf(", %lu", c);
 
-		if (count == 98)
-		{
-			printf(", %lu", c);
-		}
-		else
-		{
-			printf(", %lu", c);
-		}
-
-		/* Update Fibonacci numbers */
 		a = b;
 		b = c;
 	}
-
 	printf("\n");
-
 	return (0);
 }
-
