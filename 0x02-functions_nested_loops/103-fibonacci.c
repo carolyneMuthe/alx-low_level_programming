@@ -11,6 +11,8 @@ int main(void)
 {
 	unsigned long first = 1, second = 2, next;
 	unsigned long sum = 0;
+
+	while (first <= 4000000)
 	{
 		if (first % 2 == 0)
 		{
