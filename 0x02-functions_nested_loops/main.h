@@ -11,5 +11,5 @@ int _abs(int);/*  computes the absolute value of an integer */
 int print_last_digit(int n); /* prints the last digit of a number. */
 void jack_bauer(void); /*  prints every minute of the day of Jack Bauer, starting from 00:00 to 23:59.*/
 int add(int a, int b); /*dds two integers and returns the result*/
-void print_to_98(int n);
+void print_to_98(int n);/* prints all natural numbers from n to 98*/
 #endif
