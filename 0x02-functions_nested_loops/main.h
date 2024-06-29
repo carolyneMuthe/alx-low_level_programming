@@ -12,4 +12,6 @@ int print_last_digit(int n); /* prints the last digit of a number. */
 void jack_bauer(void); /*  prints every minute of the day of Jack Bauer, starting from 00:00 to 23:59.*/
 int add(int a, int b); /*dds two integers and returns the result*/
 void print_to_98(int n);/* prints all natural numbers from n to 98*/
+void print_times_table(int n);/* prints the n times table, starting with 0.*/
+void print_number(int n);
 #endif
