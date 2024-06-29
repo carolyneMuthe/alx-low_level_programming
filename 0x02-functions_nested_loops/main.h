@@ -8,5 +8,5 @@ int _isalpha(int c); /*checks for alphabetic character.*/
 int print_sign(int n);/*  prints the sign of a number. */
 void times_table(void); /*  prints the 9 times table, starting with 0.*/
 int _abs(int);/*  computes the absolute value of an integer */
-int print_last_digit(int); /* prints the last digit of a number. */
+int print_last_digit(int n); /* prints the last digit of a number. */
 #endif
