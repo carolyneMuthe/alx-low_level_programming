@@ -10,13 +10,24 @@ int main(void)
 	unsigned long a = 1, b = 2, c;
 	int count;
 
+	/* Print the first two Fibonacci numbers */
 	printf("%lu, %lu", a, b);
 
+	/* Loop to calculate and print the next 96 Fibonacci numbers */
 	for (count = 3; count <= 98; count++)
 	{
 		c = a + b;
-		printf(", %lu", c);
 
+		if (count == 98)
+		{
+			printf(", %lu", c);
+		}
+		else
+		{
+			printf(", %lu", c);
+		}
+
+		/* Update Fibonacci numbers */
 		a = b;
 		b = c;
 	}
