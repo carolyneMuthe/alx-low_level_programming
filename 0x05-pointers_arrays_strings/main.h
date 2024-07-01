@@ -11,4 +11,5 @@ void print_rev(char *s); /* prints a string, in reverse */
 void rev_string(char *s); /* reverses a string */
 void puts2(char *str);
 void puts_half(char *str);
+void print_array(int *a, int n);
 #endif /* MAIN_H */
