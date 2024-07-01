@@ -2,35 +2,44 @@
 #include <stdlib.h>
 #include <time.h>
 
-#define PASS_LENGTH 6
 /**
- * main - Generates a valid password for the 101-crackme program.
+ * main - Generates a random valid password for the 101-crackme program.
  *
- * Return: Always 0.
+ * Return: Always 0 (Success).
  */
 int main(void)
 {
-	char password[PASS_LENGTH + 1] = {0};
-	int i, random_value;
+	char password[7];
+	int i;
+	int sum = 0;
 
-	srand(time(NULL));
+	srand(time(NULL));  /* Seed the random number generator */
 
-	for (i = 0; i < PASS_LENGTH; i++)
+	for (i = 0; i < 6; i++)
 	{
-		random_value = rand() % 62;
-		if (random_value < 10)
-		{
-			password[i] = '0' + random_value;
-		}
-		else if (random_value < 36)
-		{
-			password[i] = 'A' + (random_value - 10);
-		}
+		int r = rand() % 62;
+
+		if (r < 10)
+			password[i] = '0' + r;  /* Digits 0-9 */
+		else if (r < 36)
+			password[i] = 'A' + (r - 10);  /* Uppercase letters A-Z */
 		else
-		{
-			password[i] = 'a' + (random_value - 36);
-		}
+			password[i] = 'a' + (r - 36);  /* Lowercase letters a-z */
+
+		sum += password[i];
 	}
-	printf("%s\n", password);
+
+	/* Add the final character to make the password valid */
+	password[6] = 2772 - sum;
+
+	if (password[6] < '0')
+		password[6] += 58;  /* Convert to a printable character (0-9, A-Z, a-z) */
+	else if (password[6] > 'z')
+		password[6] -= 62;
+
+	password[7] = '\0';  /* Null-terminate the string */
+
+	printf("%s\n", password);  /* Print the generated password */
+
 	return (0);
 }
