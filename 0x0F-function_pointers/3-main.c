@@ -18,22 +18,23 @@ int main(int argc, char *argv[])
 	{
 		printf("Error\n");
 		exit(98);
-    }
+	}
 
-    num1 = atoi(argv[1]);
-    num2 = atoi(argv[3]);
+	num1 = atoi(argv[1]);
 
-    operation = get_op_func(argv[2]);
+	num2 = atoi(argv[3]);
 
-    if (operation == NULL)
-    {
-        printf("Error\n");
-        exit(99);
-    }
+	operation = get_op_func(argv[2]);
 
-    result = operation(num1, num2);
+	if (operation == NULL)
+	{
+		printf("Error\n");
+		exit(99);
+	}
 
-    printf("%d\n", result);
+	result = operation(num1, num2);
 
-    return (0);
+	printf("%d\n", result);
+
+	return (0);
 }
