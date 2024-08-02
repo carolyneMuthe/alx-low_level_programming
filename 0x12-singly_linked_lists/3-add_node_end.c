@@ -19,21 +19,21 @@ list_t *add_node_end(list_t **head, const char *str)
 	if (new_node == NULL)
 		return (NULL);
 	new_node->str = strdup(str);
-	 if (new_node->str == NULL)
-	 {
-		 free(new_node);
-		 return (NULL);
-	 }
-	 str_len = strlen(str);
-	 new_node->len = str_len;
-	 new_node->next = NULL;
-	 if (*head == NULL)
-	 {
-		 *head = new_node;
-		 return (new_node);
-	 }
-	 while (temp->next != NULL)
-		 temp = temp->next;
-	 temp->next = new_node;
-	 return (new_node);
+	if (new_node->str == NULL)
+	{
+		free(new_node);
+		return (NULL);
+	}
+	str_len = strlen(str);
+	new_node->len = str_len;
+	new_node->next = NULL;
+	if (*head == NULL)
+	{
+		*head = new_node;
+		return (new_node);
+	}
+	while (temp->next != NULL)
+		temp = temp->next;
+	temp->next = new_node;
+	return (new_node);
 }
