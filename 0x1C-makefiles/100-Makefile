@@ -1,0 +1,35 @@
+#!/bin/bash
+# Makefile for school project
+
+# Compiler and flags
+CC = gcc
+CFLAGS = -Wall -Werror -Wextra -pedantic
+
+# Sources and objects
+SRC = main.c school.c
+OBJ = $(SRC:.c=.o)
+NAME = school
+
+# Header file check (m.h)
+-include m.h
+
+# Rule to build the executable
+all: $(NAME)
+
+$(NAME): $(OBJ)
+	$(CC) $(OBJ) -o $(NAME)
+
+# Rule to clean up
+clean:
+	$(RM) $(OBJ) $(NAME)
+
+# Rule to remove only object files
+oclean:
+	$(RM) $(OBJ)
+
+# Rule to clean everything
+fclean: clean
+	$(RM) $(NAME)
+
+# Rule to force recompilation
+re: fclean all
